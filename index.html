@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="images/share.png">
+    <link rel="icon" href="images/logo.png">
+    <script defer src="js/script.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/currencyConverter.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>O.P.-Exchange</title>
+</head>
+
+<body class="body">
+    <section class="currencyConverter">
+        <h2 id="kalkulator-walut" class="currencyConverter__title"> Currency converter.</h2>
+
+        <form class="js-formCurrency">
+            <fieldset class="currencyConverter__field">
+                <legend class="currencyConverter__legend">Exchange</legend>
+                <p>Required filds are marked with*</p>
+                <p>
+                    <label>
+                        <span class="currencyConverter__data">Enter the amount of currency in PLN:*</span>
+                        <input class="currencyConverter__input js-PLN" type="number" min="1" step="any" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span class="currencyConverter__data">Select Your exchange currency:</span>
+                        <select class="currencyConverter__input js-currency">
+                            <option value="funt">British pound</option>
+                            <option value="euro">Euro</option>
+                            <option value="dollar">U.S. Dollar</option>
+                        </select>
+                    </label>
+                <p>Current exchange rate:<strong class="js-rate"></strong> </p>
+                <button class="currencyConverter__button">Recalculate</button>
+                <p>
+                    Amount after conversion:<strong class="js-amount currencyConverter__strong"></strong>
+                </p>
+                <p class="currencyConverter__paragraph">Theoretical exchange rates only for homework!</p>
+            </fieldset>
+        </form>
+    </section>
+</body>
+
+</html>
