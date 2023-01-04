@@ -1,4 +1,4 @@
-console.log("Witaj wybrancu:)");
+console.log("Hello");
 
 
 
