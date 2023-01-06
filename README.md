@@ -6,5 +6,7 @@
 - Javascript - ECMAScript 2020;
 - BEM convention.
 ## Visit page at: https://pawelowiesek.github.io/Currency-converter/
+## ![share](https://user-images.githubusercontent.com/121549413/211060344-f83a03de-00ef-4402-8d36-adb06adc324a.png)
+
 ## Intro.
 ![Animation](https://user-images.githubusercontent.com/121549413/210395140-8b40c0a6-ba1b-434f-ac88-3f0effd199b9.gif)
