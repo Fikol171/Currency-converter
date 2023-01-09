@@ -1,34 +1,62 @@
-console.log("Hello");
+{
+    const welcome = () => {
 
+        console.log("Hello");
 
+    }
+    const recalculate = (contant, currency) => {
 
-let formCurrencyElement = document.querySelector(".js-formCurrency");
-let PLNElement = document.querySelector(".js-PLN");
-let currencyElement = document.querySelector(".js-currency");
-let rateElement = document.querySelector(".js-rate");
-let amountElement = document.querySelector(".js-amount");
+        const funt = 5.05;
+        const euro = 4.78;
+        const dollar = 4.82;
+        switch (currency) {
 
-let funt = 5.05;
-let euro = 4.78;
-let dollar = 4.82;
+            case "funt": return contant / funt;
 
-formCurrencyElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+            case "euro": return contant / euro;
 
-    let contant = PLNElement.value;
-    let currency = currencyElement.value;
-    let amount;
-    switch (currency) {
-        case "funt": amount = contant / funt; rate = funt + "GBP";
-            break;
-        case "euro": amount = contant / euro; rate = euro + "EUR";
-            break;
-        case "dollar": amount = contant / dollar; rate = dollar + "USD";
-            break;
+            case "dollar": return contant / dollar;
+
+        }
+    }
+    const kurs = (currency) => {
+
+        const funt = 5.05;
+        const euro = 4.78;
+        const dollar = 4.82;
+
+        switch (currency) {
+
+            case "funt": return funt;
+
+            case "euro": return euro;
+
+            case "dollar": return dollar;
+
+        }
+    }
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+        const PLNElement = document.querySelector(".js-PLN");
+        const currencyElement = document.querySelector(".js-currency");
+        const rate = document.querySelector(".js-rate");
+        const amountElement = document.querySelector(".js-amount");
+        const contant = +PLNElement.value;
+        const currency = currencyElement.value;
+        const result = recalculate(contant, currency);
+        const dayRate = kurs(currency);
+        rate.innerText = `${" " + dayRate + " " + currency}`
+        amountElement.innerText = `${result.toFixed(2)}`
+        document.querySelector(".js-formCurrency").reset()
+    };
+
+    const init = () => {
+
+        const formCurrencyElement = document.querySelector(".js-formCurrency");
+        formCurrencyElement.addEventListener("submit", onFormSubmit);
+        welcome();
     }
 
-    rateElement.innerText = `${rate}`
-    amountElement.innerText = `${amount.toFixed(2)}`
-    document.querySelector(".js-formCurrency").reset()
-});
+    init();
 
+}
